@@ -12,6 +12,9 @@ class Account:
     def withdraw(self, amount):
         self.balance -= amount
     
+    def change_all(self, new_name,amount):
+        self.balance = amount
+        self.name = new_name
     def to_dict(self):
         return {
             "name": self.name,
