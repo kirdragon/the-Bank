@@ -28,9 +28,9 @@ class BankManager:
                 self.accounts.pop(index)
                 self.save()
             else:
-                print("Аккаунта с таким номером не существует!")
+                print("\nАккаунта с таким номером не существует!")
         else:
-            print("Пока не существует ни 1 аккаунта")
+            print("\nПока не существует ни 1 аккаунта")
     
     def get_data(self):
         for i,accounts in enumerate(self.accounts,1):
@@ -40,39 +40,37 @@ class BankManager:
         if 0<=index<len(self.accounts):
             data = self.accounts[index]
             if choice == 1:
-                name = input("Новое имя: ")
+                name = input("\nНовое имя: ")
                 data.rename(name)
             elif choice == 2:
-                dep = int(input("Новый баланс: "))
-                data.deposit(dep)
+                dep = int(input("\nНовый баланс: "))
+                data.new_balance(dep)
             elif choice == 3:
-                name = input("Новое имя: ")
-                dep = int(input("Новый баланс: "))
+                name = input("\nНовое имя: ")
+                dep = int(input("\nНовый баланс: "))
                 data.change_all(name,dep)
-            elif choice == 4:
-                return
             self.save()
         else:
-            print("Аккаунта под таким номером не существует!")
+            print("\nАккаунта под таким номером не существует!")
     
     def dep_acc(self,index):
         if 0<=index<len(self.accounts):
-            amoun = int(input("Сумма депозита: "))
+            amoun = int(input("\nСумма депозита: "))
             if amoun>0:
                 self.accounts[index].balance += amoun
                 self.save()
             else:
-                print("Ошибка! Сумма депозита должна быть положительным числом!")
+                print("\nОшибка! Сумма депозита должна быть положительным числом!")
         else:
-            print("Аккаунта с таким номером не существует!")
+            print("\nАккаунта с таким номером не существует!")
     
     def withdraw_money(self,index):
         if 0<=index<len(self.accounts):
-            amoun = int(input("Сумма снятия: "))
+            amoun = int(input("\nСумма снятия: "))
             if amoun>0:
                 self.accounts[index].balance -= amoun
                 self.save()
             else:
-                print("Ошибка! Сумма снятия должна быть положительным числом!")
+                print("\nОшибка! Сумма снятия должна быть положительным числом!")
         else:
-            print("Аккаунта с таким номером не существует!")
+            print("\nАккаунта с таким номером не существует!")

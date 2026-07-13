@@ -1,14 +1,10 @@
 [
     {
-        "name": "roman",
-        "balance": 64
+        "name": "Sigma",
+        "balance": 300
     },
     {
-        "name": "eyr",
-        "balance": 346
-    },
-    {
-        "name": "seg",
-        "balance": -346
+        "name": "gsgse",
+        "balance": 52315
     }
 ]
