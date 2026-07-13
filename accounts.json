@@ -1,0 +1,14 @@
+[
+    {
+        "name": "roman",
+        "balance": 64
+    },
+    {
+        "name": "eyr",
+        "balance": 346
+    },
+    {
+        "name": "seg",
+        "balance": -346
+    }
+]

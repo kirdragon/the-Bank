@@ -6,6 +6,9 @@ class Account:
     def rename(self,new_name):
         self.name = new_name
     
+    def new_balance(self, new_bal):
+        self.balance = new_bal
+    
     def deposit(self,amount):
         self.balance += amount
     
